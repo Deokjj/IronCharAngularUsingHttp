@@ -13,17 +13,17 @@
 
   <section class="operations">
     <div class="operation">
-      <button id="fetch-all">Fetch all</button>
+      <button id="fetch-all" (click) = "fetchAll()">Fetch all</button>
     </div>
     <div class="operation">
       <label for="character-id">Search by ID: </label>
-      <input type="text" name="character-id">
-      <button id="fetch-one">Fetch one</button>
+      <input #charId type="text" name="character-id">
+      <button id="fetch-one" (click) = "fetchOne(charId.value)">Fetch one</button>
     </div>
     <div class="operation delete">
       <label for="character-id-delete">Delete by ID: </label>
-      <input type="text" name="character-id-delete">
-      <button id="delete-one">Delete one</button>
+      <input #charIdToDelete type="text" name="character-id-delete">
+      <button id="delete-one" (click) = "deleteOne(charIdToDelete.value)">Delete one</button>
     </div>
 
   </section>
